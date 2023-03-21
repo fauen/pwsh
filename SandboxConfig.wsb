@@ -1,0 +1,20 @@
+<Configuration>
+    <vGPU>Disable</vGPU>
+    <Networking>Enable</Networking>
+    <MappedFolders>
+        <MappedFolder>
+            <HostFolder>C:\Users\%USERNAME%\Sandbox</HostFolder>
+            <SandboxFolder>C:\Users\WDAGUtilityAccount\Downloads</SandboxFolder>
+            <ReadOnly>True</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+    <LogonCommand>
+        <Command>C:\Users\WDAGUtilityAccount\Downloads\executionpolicy.cmd</Command>
+    </LogonCommand>
+    <AudioInput>Disable</AudioInput>
+    <VideoInput>Disable</VideoInput>
+    <ProtectedClient>Disable</ProtectedClient>
+    <PrinterRedirection>Disable</PrinterRedirection>
+    <ClipboardRedirection>Enable</ClipboardRedirection>
+    <MemoryInMB>6144</MemoryInMB>
+</Configuration>
