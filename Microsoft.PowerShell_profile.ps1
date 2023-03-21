@@ -11,11 +11,9 @@ else {
 # Load the Prompt, Functions and Aliases
 if ($PSVersionTable.Platform -eq "Unix") {
     . $HOME/.config/powershell/PowershellPrompt.ps1
-    . $HOME/.config/powershell/PowershellAliases.ps1
 }
 else {
     . $HOME\pwsh\PowershellPrompt.ps1
-    . $HOME\pwsh\PowershellAliases.ps1
     . $HOME\pwsh\ImportModules.ps1
 }
 
