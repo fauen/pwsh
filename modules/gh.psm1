@@ -19,6 +19,6 @@ function GH {
         git add .; git commit; git push
     }
     else {
-        Write-Warning -Message "Git is not installed!"
+        git status
     }
 }
