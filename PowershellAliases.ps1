@@ -1,3 +1,3 @@
-New-Alias -Name "gstatus" Read-GitHub
-New-Alias -Name "gpull" Receive-GitHub
-New-Alias -Name "gacp" Write-GitHub
+New-Alias -Name "gstatus" gh -Read
+New-Alias -Name "gpull" gh -Receive
+New-Alias -Name "gacp" gh -Write

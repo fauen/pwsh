@@ -1,4 +1,7 @@
-# Default applications to install when you have a new Windows install.
+# Always nice to have a .config directory.
+if (-not(Test-Path -Path $HOME\.config)) {
+    New-Item -ItemType Directory -Path $HOME\.config
+}
 
 Clear-Host
 
@@ -32,7 +35,7 @@ switch ( $answer ) {
         winget install --id=VideoLAN.VLC -e --accept-source-agreements
     }
     2 {
-        $filePath = "$env:HOMEPATH\github\bin\powershell\PowershellLinks.ps1"
+        $filePath = "$HOME\pwsh\PowershellLinks.ps1"
         if (Test-Path -Path $filePath) {
             Invoke-Expression -Command $filePath
         }
