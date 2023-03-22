@@ -1,7 +1,7 @@
 function Get-MyIp {
     param (
         [Parameter(Mandatory=$false)]
-        [string]$Full
+        [switch]$Full
     )
     if ($Full) {
         Invoke-RestMethod "ipall.backman.io"

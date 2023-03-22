@@ -1,9 +1,0 @@
-#!/bin/bash
-# Author Daniel "fauen" Bäckman
-# https://github.com/fauen
-
-if [ -z "$1" ];then
-	echo "Input username."
-else
-	powershell.exe Get-ADUser -Identity "$1" -Properties "*"
-fi
