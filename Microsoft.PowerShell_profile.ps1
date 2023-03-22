@@ -8,7 +8,7 @@ else {
     Import-Module Terminal-Icons -ErrorAction Ignore
 }
 
-# Load the Prompt, Functions and Aliases
+# Load the Prompt and import custom Modules. 
 if ($PSVersionTable.Platform -eq "Unix") {
     . $HOME/.config/powershell/PowershellPrompt.ps1
     . $HOME/pwsh/ImportModules.ps1
@@ -21,4 +21,14 @@ else {
 # The ErrorAction here is specifically for Unix platforms.
 if (-not (Set-PSReadLineOption -PredictionViewStyle ListView)) {
     Set-PSReadLineOption -PredictionViewStyle ListView
+}
+
+# Set Aliases if specific module is loaded.
+if (Get-Module -Name 'GitHub') {
+    New-Alias -Name "gstatus" -Value Read-GitHub -Description "git status"
+    New-Alias -Name "gpull" -Value Receive-GitHub -Description "git pull"
+    New-Alias -Name "gacp" -Value Write-GitHub -Description "git add .; git commit; git push"
+}
+else {
+    Write-Warning "Could not load aliases."
 }
