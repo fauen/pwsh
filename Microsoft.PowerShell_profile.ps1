@@ -1,4 +1,6 @@
 # Import or Install modules
+$configPath = Join-Path -Path "$HOME" -ChildPath "pwsh\"
+
 if (Get-Module -ListAvailable -Name Terminal-Icons) {
     Import-Module -Name Terminal-Icons -ErrorAction Ignore
 }
@@ -10,12 +12,12 @@ else {
 
 # Load the Prompt and import custom Modules. 
 if ($PSVersionTable.Platform -eq "Unix") {
-    . $HOME/pwsh/PowershellPrompt.ps1
-    . $HOME/pwsh/ImportModules.ps1
+    . $configPath`PowershellPrompt.ps1
+    . $configPath`ImportModules.ps1
 }
 else {
-    . $HOME\pwsh\PowershellPrompt.ps1
-    . $HOME\pwsh\ImportModules.ps1
+    . $configPath`PowershellPrompt.ps1
+    . $configPath`ImportModules.ps1
 }
 
 # The ErrorAction here is specifically for Unix platforms.
