@@ -9,9 +9,9 @@ if ($PSVersionTable.Platform -eq "Unix") {
 #    ln -s $HOME/pwsh/Microsoft.PowerShell_profile.ps1 $HOME/.config/powershell/$1
 #    ln -s $HOME/pwsh/PowershellPrompt.ps1 $HOME/.config/powershell/$1
 #    ln -s $HOME/pwsh/PowershellAliases.ps1 $HOME/.config/powershell/$1
-    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/$args[1]" -Target "$configPath/Microsoft.PowerShell_profile.ps1"
-    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/$_" -Target "$configPath/PowershellPrompt.ps1"
-    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/$_" -Target "$configPath/PowershellAliases.ps1"
+    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/" -Target "$configPath/Microsoft.PowerShell_profile.ps1"
+    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/" -Target "$configPath/PowershellPrompt.ps1"
+    New-Item -ItemType SymbolicLink -Path "$HOME/.config/powershell/" -Target "$configPath/PowershellAliases.ps1"
 }
 else {
     Start-Process ms-settings:developers
