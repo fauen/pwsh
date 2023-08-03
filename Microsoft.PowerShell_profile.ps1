@@ -10,15 +10,8 @@ else {
     Import-Module Terminal-Icons -ErrorAction Ignore
 }
 
-# Load the Prompt and import custom Modules. 
-if ($PSVersionTable.Platform -eq "Unix") {
-    . $configPath`PowershellPrompt.ps1
-    . $configPath`ImportModules.ps1
-}
-else {
-    . $configPath`PowershellPrompt.ps1
-    . $configPath`ImportModules.ps1
-}
+. $configPath`PowershellPrompt.ps1
+. $configPath`ImportModules.ps1
 
 # The ErrorAction here is specifically for Unix platforms.
 if (-not (Set-PSReadLineOption -PredictionViewStyle ListView)) {
