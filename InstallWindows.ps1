@@ -45,7 +45,7 @@ switch ( $answer ) {
     }
     3 {
         wsl.exe --install
-        if ($? -eq $true) {
+        if ($?) {
             Write-Output "WSL is installed"
         }
         else {
