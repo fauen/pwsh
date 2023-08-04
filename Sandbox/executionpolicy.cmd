@@ -4,4 +4,5 @@ REM though so I don't recommend it and that is why the
 REM config doesn't have it included anymore.
 
 powershell.exe Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
-powershell.exe C:\Users\WDAGUtilityAccount\Downloads\pwshDownloadInstall.ps1
+powershell.exe C:\Temp\pwshDownloadInstall.ps1
+powershell.exe C:\Temp\wingetDownloadInstall.ps1
