@@ -14,9 +14,21 @@ else {
 . $configPath`ImportModules.ps1
 
 # The ErrorAction here is specifically for Unix platforms.
-if (-not (Set-PSReadLineOption -PredictionViewStyle ListView)) {
-    Set-PSReadLineOption -PredictionViewStyle ListView
+# if (-not (Set-PSReadLineOption -PredictionViewStyle ListView)) {
+#     Set-PSReadLineOption -PredictionViewStyle ListView
+# }
+
+# Multiple settings for PSReadLine
+$PSReadLineOptions = @{
+    EditMode = 'Vi'
+    HistoryNoDuplicates = $true
+    BellStyle = 'Visual'
+    PredictionViewStyle = 'ListView'
+    ViModeIndicator = 'Script'
+    ViModeChangeHandler = $Function:viprompt
 }
+
+Set-PSReadLineOption @PSReadLineOptions
 
 # Set Aliases if specific module is loaded.
 if (Get-Module -Name 'GitHub') {

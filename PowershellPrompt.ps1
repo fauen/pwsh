@@ -9,3 +9,9 @@ function prompt {
       "$username`@$machinename`:$(Get-Location) `e[32m>>>`e[0m " 
    }
 }
+
+function viprompt {
+  if ($args[0] -eq 'Command') {
+      Write-Host "Command mode entered!"
+  }
+}
