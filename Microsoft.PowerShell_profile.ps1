@@ -15,7 +15,7 @@ else {
 
 # Multiple settings for PSReadLine
 $PSReadLineOptions = @{
-    EditMode = 'Vi'
+    EditMode = 'Emacs'
     HistoryNoDuplicates = $true
     BellStyle = 'Visual'
     PredictionViewStyle = 'ListView'
