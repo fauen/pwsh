@@ -33,3 +33,6 @@ if (Get-Module -Name 'GitHub') {
 else {
     Write-Warning "Could not load aliases."
 }
+
+# Other aliases
+New-Alias -Name "Get-Keybind" -Value Get-PSReadLineKeyHandler -Description "Get the keybinds for current EditMode."
