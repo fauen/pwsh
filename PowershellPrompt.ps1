@@ -12,6 +12,6 @@ function prompt {
 
 function viprompt {
   if ($args[0] -eq 'Command') {
-      Write-Host "Command mode entered!"
+      Write-Host "[c]" + $Function:prompt
   }
 }
