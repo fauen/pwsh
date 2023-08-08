@@ -13,19 +13,13 @@ else {
 . $configPath`PowershellPrompt.ps1
 . $configPath`ImportModules.ps1
 
-# The ErrorAction here is specifically for Unix platforms.
-# if (-not (Set-PSReadLineOption -PredictionViewStyle ListView)) {
-#     Set-PSReadLineOption -PredictionViewStyle ListView
-# }
-
 # Multiple settings for PSReadLine
 $PSReadLineOptions = @{
     EditMode = 'Vi'
     HistoryNoDuplicates = $true
     BellStyle = 'Visual'
     PredictionViewStyle = 'ListView'
-    ViModeIndicator = 'Script'
-    ViModeChangeHandler = $Function:viprompt
+    ViModeIndicator = 'Prompt'
 }
 
 Set-PSReadLineOption @PSReadLineOptions
