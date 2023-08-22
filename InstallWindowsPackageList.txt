@@ -1,0 +1,11 @@
+Discord.Discord
+Microsoft.VisualStudioCode
+7zip.7zip
+Mozilla.Firefox
+Microsoft.PowerToys
+Spotify.Spotify
+VideoLAN.VLC
+Microsoft.Git
+vim.vim
+AgileBits.1Password
+Microsoft.PowerShell
