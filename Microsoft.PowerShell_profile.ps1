@@ -36,3 +36,4 @@ else {
 
 # Other aliases
 New-Alias -Name "Get-Keybind" -Value Get-PSReadLineKeyHandler -Description "Get the keybinds for current EditMode."
+New-Alias -Name "drunk" -Value Invoke-Docker -Description "Docker run shortcut"
