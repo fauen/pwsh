@@ -1,4 +1,4 @@
-New-Alias -Name "ls -la" -Value Get-ChildItem -Force
+New-Alias -Name "lsa" -Value Get-ChildItem -Force
 
 # Set Aliases if specific module is loaded.
 if (Get-Module -Name 'GitHub') {
