@@ -9,3 +9,8 @@ Microsoft.Git
 vim.vim
 AgileBits.1Password
 Microsoft.PowerShell
+fzf
+BurntSushi.ripgrep.MSVC
+sharkdp.bat
+rustlang.rustup
+openjs.nodejs
