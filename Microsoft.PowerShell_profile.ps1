@@ -38,3 +38,6 @@ Set-PSReadLineOption @PSReadLineOptions
 # Other aliases
 New-Alias -Name "Get-Keybind" -Value Get-PSReadLineKeyHandler -Description "Get the keybinds for current EditMode."
 New-Alias -Name "drunk" -Value Invoke-Docker -Description "Docker run shortcut"
+
+# Starship setup
+Invoke-Expression (&starship init powershell)
