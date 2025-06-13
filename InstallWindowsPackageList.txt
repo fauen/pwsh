@@ -12,5 +12,6 @@ Microsoft.PowerShell
 fzf
 BurntSushi.ripgrep.MSVC
 sharkdp.bat
+starship.starship
 rustlang.rustup
 openjs.nodejs
