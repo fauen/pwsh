@@ -10,7 +10,7 @@ else {
     Import-Module Terminal-Icons -ErrorAction Ignore
 }
 
-. $configPath`PowershellPrompt.ps1
+#. $configPath`PowershellPrompt.ps1
 . $configPath`ImportModules.ps1
 . $configPath`Aliases.ps1
 
