@@ -16,11 +16,13 @@ else {
 
 # Multiple settings for PSReadLine
 $PSReadLineOptions = @{
-    EditMode = 'Emacs'
+    EditMode = 'vi'
+    #EditMode = 'Emacs'
     HistoryNoDuplicates = $true
     BellStyle = 'Visual'
     PredictionViewStyle = 'ListView'
-    ViModeIndicator = 'Prompt'
+    ViModeIndicator = 'cursor'
+    #ViModeIndicator = 'prompt'
 }
 
 Set-PSReadLineOption @PSReadLineOptions
